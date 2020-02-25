@@ -6,8 +6,8 @@
 			"version": "1.0.0"
 		},
 		"dataSources": {
-	  "invoiceRemote": {
-		"uri": "/odata",
+	  "default": {
+		"uri": "/odata/",
 		"type": "OData",
 		"settings": {
 		  "odataVersion": "2.0"
@@ -23,12 +23,41 @@
 		},
 		"models": {
 	  "": {
-		"dataSource": "invoiceRemote"
+		"dataSource": "default",
+                "settings" : {
+                    "autoExpandSelect" : false,
+                    "operationMode" : "Server",
+                    "synchronizationMode" : "None",
+                    "groupId": "$direct"
+                },
+                "type" : "sap.ui.model.odata.v4.ODataModel"
 	  }
 		},
 		"rootView": {
 			"viewName": "fokind.budgeter.view.App",
 			"type": "XML"
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "fokind.budgeter.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"async": true
+			},
+			"routes": [
+			    {
+					"pattern": "",
+					"name": "items",
+					"target": "items"
+				}
+		    ],
+			"targets": {
+				"items": {
+					"viewName": "Items"
+				}
+			}
 		}
 	}
 }

@@ -1,8 +1,8 @@
 <edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
-	<edmx:DataServices m:DataServiceVersion="1.0" m:MaxDataServiceVersion="4.0"
+	<edmx:DataServices m:DataServiceVersion="2.0" m:MaxDataServiceVersion="4.0"
 					   xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
-		<Schema Namespace="NorthwindModel" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-			<EntityType Name="Invoice">
+		<Schema Namespace="Budget" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="Item">
 				<Key>
 					<PropertyRef Name="id"/>
 				</Key>
@@ -11,9 +11,9 @@
 				<Property Name="amount" Type="Edm.Decimal"/>
 			</EntityType>
 		</Schema>
-		<Schema Namespace="ODataWebV2.Northwind.Model" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-			<EntityContainer Name="NorthwindEntities" m:IsDefaultEntityContainer="true">
-				<EntitySet Name="Invoices" EntityType="NorthwindModel.Invoice"/>
+		<Schema Namespace="OData" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityContainer Name="Entities" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="Items" EntityType="Budget.Item"/>
 			</EntityContainer>
 		</Schema>
 	</edmx:DataServices>

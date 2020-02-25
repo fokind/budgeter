@@ -1,0 +1,17 @@
+<mvc:View controllerName="fokind.budgeter.controller.Items"
+    xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	displayBlock="true">
+		<Page title="Budgeter">
+			<List items="{/Items}" id="items">
+				<headerToolbar>
+					<Toolbar>
+						<Title text="Budget Items"/>
+						<ToolbarSpacer/>
+						<Button text="Add" press="onAddPress"/>
+					</Toolbar>
+				</headerToolbar>
+				<StandardListItem title="{name}" info="{amount}" press="onItemPress"/>
+			</List>
+		</Page>
+</mvc:View>
