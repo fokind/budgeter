@@ -4,7 +4,9 @@
   xmlns:form="sap.ui.layout.form" 
 	xmlns="sap.m"
 	displayBlock="true">
-	<Page title="Budgeter">
+	<Page title="Budgeter"
+	showNavButton="true" 
+    navButtonPress="onBackPress" >
 	    <form:Form editable="true">
 	        <form:layout>
                   <form:ResponsiveGridLayout labelSpanXL="2" 
@@ -36,6 +38,16 @@
                             <l:GridData span="XL2 L2 M3 S6"/>
                           </layoutData>
                         </Input>
+                      </form:FormElement>
+                      <form:FormElement label="Time">
+                        <DatePicker
+                          displayFormat="short" 
+                          valueFormat="yyyy-MM-dd" 
+                          value="{time}">
+                          <layoutData>
+                            <l:GridData span="XL2 L2 M3 S6"/>
+                          </layoutData>
+                        </DatePicker>
                       </form:FormElement>
                 </form:formElements>
               </form:FormContainer>

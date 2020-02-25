@@ -8,6 +8,7 @@
 				</Key>
 				<Property Name="id" Type="Edm.String" Nullable="false"/>
 				<Property Name="name" Type="Edm.String" Nullable="true"/>
+				<Property Name="time" Type="Edm.String" Nullable="true"/>
 				<Property Name="amount" Type="Edm.Decimal"/>
 			</EntityType>
 		</Schema>

@@ -21,6 +21,12 @@ sap.ui.define([
         oView.bindElement({
           path: "/Items('" + sId + "')"
         });
+      },
+
+      onBackPress: function() {
+        this.getOwnerComponent()
+          .getRouter()
+          .navTo("items");
       }
 	});
 });
