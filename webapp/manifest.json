@@ -51,11 +51,19 @@
 					"pattern": "",
 					"name": "items",
 					"target": "items"
+				},
+			    {
+					"pattern": "item/{id}",
+					"name": "item",
+					"target": "item"
 				}
 		    ],
 			"targets": {
 				"items": {
 					"viewName": "Items"
+				},
+				"item": {
+					"viewName": "Item"
 				}
 			}
 		}

@@ -11,7 +11,10 @@
 						<Button text="Add" press="onAddPress"/>
 					</Toolbar>
 				</headerToolbar>
-				<StandardListItem title="{name}" info="{amount}" press="onItemPress"/>
+				<StandardListItem title="{name}"
+    				info="{amount}"
+    				press="onItemPress"
+    				type="Navigation"/>
 			</List>
 		</Page>
 </mvc:View>

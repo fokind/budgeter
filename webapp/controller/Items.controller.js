@@ -8,14 +8,16 @@ sap.ui.define([
 		    var oList = this.byId("items");
 		    var oBinding = oList.getBinding("items");
 		    var oContext = oBinding.create({
-		        id: "1",
+		        id: "0",
 		        name: "new 1",
 		        amount: 0
 		    })
 		},
 		
 		onItemPress: function(oEvent) {
-		    
+		    this.getOwnerComponent().getRouter().navTo("item", {
+		        id: "0"
+		    });
 		}
 	});
 });

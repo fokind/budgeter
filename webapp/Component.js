@@ -1,5 +1,8 @@
-sap.ui.define(["sap/ui/core/UIComponent"], function (UIComponent) {
-	"use strict";
+sap.ui.define(["sap/ui/core/UIComponent", "sap/ui/Device"], function(
+  UIComponent,
+  Device
+) {
+  "use strict";
 
 	return UIComponent.extend("fokind.budgeter.Component", {
 		metadata: {
@@ -9,7 +12,16 @@ sap.ui.define(["sap/ui/core/UIComponent"], function (UIComponent) {
 		init: function () {
 			UIComponent.prototype.init.apply(this, arguments);
 			var oRouter = this.getRouter();
-      oRouter.initialize();
-		}
+              oRouter.initialize();
+		},
+
+    getContentDensityClass: function() {
+      if (!this._sContentDensityClass) {
+        this._sContentDensityClass = Device.support.touch
+          ? "sapUiSizeCozy"
+          : "sapUiSizeCompact";
+      }
+      return this._sContentDensityClass;
+    }
 	});
 });

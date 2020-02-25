@@ -1,0 +1,45 @@
+<mvc:View controllerName="fokind.budgeter.controller.Item"
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:l="sap.ui.layout" 
+  xmlns:form="sap.ui.layout.form" 
+	xmlns="sap.m"
+	displayBlock="true">
+	<Page title="Budgeter">
+	    <form:Form editable="true">
+	        <form:layout>
+                  <form:ResponsiveGridLayout labelSpanXL="2" 
+                    labelSpanL="2" 
+                    labelSpanM="3" 
+                    labelSpanS="6" 
+                    adjustLabelSpan="false" 
+                    emptySpanXL="0" 
+                    emptySpanL="0" 
+                    emptySpanM="0" 
+                    emptySpanS="0" 
+                    columnsXL="12" 
+                    columnsL="6" 
+                    columnsM="4"/>
+                </form:layout>
+                <form:formContainers>
+                  <form:FormContainer>
+                    <form:formElements>
+                      <form:FormElement label="Name">
+                          <Input value="{name}">
+                          <layoutData>
+                            <l:GridData span="XL2 L2 M3 S6"/>
+                          </layoutData>
+                        </Input>
+                      </form:FormElement>
+                      <form:FormElement label="Amount">
+                          <Input value="{amount}">
+                          <layoutData>
+                            <l:GridData span="XL2 L2 M3 S6"/>
+                          </layoutData>
+                        </Input>
+                      </form:FormElement>
+                </form:formElements>
+              </form:FormContainer>
+            </form:formContainers>
+          </form:Form>
+	</Page>
+</mvc:View>
